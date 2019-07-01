@@ -533,3 +533,43 @@
 #53 /opt/lampp/htdocs/electric/public/index.php(53): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #54 {main}
 "} 
+[2019-07-01 11:16:47] local.ERROR: The /opt/lampp/htdocs/electric/bootstrap/cache directory must be present and writable. {"exception":"[object] (Exception(code: 0): The /opt/lampp/htdocs/electric/bootstrap/cache directory must be present and writable. at /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php:168)
+[stacktrace]
+#0 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(127): Illuminate\\Foundation\\PackageManifest->write(Array)
+#1 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(97): Illuminate\\Foundation\\PackageManifest->build()
+#2 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(80): Illuminate\\Foundation\\PackageManifest->getManifest()
+#3 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#4 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(210): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /opt/lampp/htdocs/electric/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-07-01 11:17:09] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:36)
+[stacktrace]
+#0 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(141): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false)
+#1 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\\Container\\Container->build(Object(Closure))
+#3 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\\Container\\Container->resolve('blade.compiler', Array)
+#4 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#5 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Container/Container.php(1225): Illuminate\\Foundation\\Application->make('blade.compiler')
+#6 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(175): Illuminate\\Container\\Container->offsetGet('blade.compiler')
+#7 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(144): Illuminate\\Support\\Facades\\Facade::resolveFacadeInstance('blade.compiler')
+#8 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(231): Illuminate\\Support\\Facades\\Facade::getFacadeRoot()
+#9 /opt/lampp/htdocs/electric/vendor/kyslik/column-sortable/src/ColumnSortable/ColumnSortableServiceProvider.php(38): Illuminate\\Support\\Facades\\Facade::__callStatic('directive', Array)
+#10 [internal function]: Kyslik\\ColumnSortable\\ColumnSortableServiceProvider->boot()
+#11 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#12 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#13 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#14 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Container/Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#15 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(827): Illuminate\\Container\\Container->call(Array)
+#16 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(810): Illuminate\\Foundation\\Application->bootProvider(Object(Kyslik\\ColumnSortable\\ColumnSortableServiceProvider))
+#17 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Kyslik\\ColumnSortable\\ColumnSortableServiceProvider), 21)
+#18 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(811): array_walk(Array, Object(Closure))
+#19 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#20 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(210): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#21 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#22 /opt/lampp/htdocs/electric/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#23 /opt/lampp/htdocs/electric/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 {main}
+"} 
