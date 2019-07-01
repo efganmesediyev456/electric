@@ -1,0 +1,36 @@
+!.gitkeep
+
+data/
+
+# Laravel, nodeJS, Bower, Gulp exclusions, Composer exclusions
+
+node_modules/
+npm-shrinkwrap.json
+bower_components/
+bootstrap/compiled.php
+bootstrap/cache/
+
+storage/debugbar/
+storage/framework/views/
+storage/framework/sessions/
+
+#composer.phar
+#composer.lock
+#phpunit.phar
+
+#public/assets
+#public/mix-manifest.json
+
+.env
+.env.*.php
+.env.php
+.sass-cache
+
+# IDE exclusions
+.DS_Store
+Thumbs.db
+.idea
+_ide_helper.php
+.phpstorm.meta.php
+*.sqlite
+.rocketeer/
