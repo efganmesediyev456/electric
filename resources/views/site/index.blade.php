@@ -12,14 +12,14 @@
     {!! $menu !!}
 @endsection
 @section('sliders')
- {!! $slider !!}
+    {!! $slider !!}
 @endsection
 @section('abouts')
     {!! $about !!}
 @endsection
-@section('team')
-    {!! $team !!}
-@endsection
+{{--@section('team')--}}
+    {{--{!! $team !!}--}}
+{{--@endsection--}}
 @section('news')
     {!! $news !!}
 @endsection

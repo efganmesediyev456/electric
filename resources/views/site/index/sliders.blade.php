@@ -1,28 +1,59 @@
-<div class="main-banner banner_up">
-    <div id="rev_slider_34_1_wrapper" class="rev_slider_wrapper" data-alias="news-gallery34">
-        <!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
-        <div id="rev_slider_34_1" class="rev_slider fullwidthabanner" data-version="5.0.7">
-            <ul>
-                <!-- SLIDE  -->
-                @foreach($sliders as $key=>$slider)
-                <li data-index="rs-{{ $key }}">
-                    <!-- MAIN IMAGE -->
-                    <img src="images/{{ $slider->image }}" alt="" class="rev-slidebg">
-                    <!-- LAYERS -->
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption Newspaper-Title tp-resizeme " id="slide-129-layer-1" data-x="['left','left','left','left']" data-hoffset="['100','50','50','30']" data-y="['top','top','top','center']" data-voffset="['165','135','105','0']" data-fontsize="['50','50','50','30']" data-lineheight="['55','55','55','35']" data-width="['600','600','600','420']" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on">
-                        <div class="banner-text">
-                            <h2>{{ $slider->title }}</h2>
-                            <p>
-                                {{ $slider->description }}
-                            </p>
-                            <a class="btn more-btn read-more" href="{{ route('home',[$slider->lng->short_name]) }}/{{ $slider->button_path }}">{{ $slider->button_text }}</a>
+
+<div class="banner-wrapper">
+    <div id="first-slider" class="">
+        <div id="carousel-example-generic" class="carousel slide carousel-fade">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <!-- Item 1 -->
+                <div class="item slide1 active">
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-4 col-sm-5 text-center hidden-sm hidden-md hidden-lg"> <img data-animation="animated zoomInLeft" src="images/{{$sliders[0]->image}}" alt=""> </div>
+                            <div class="col-md-8 col-sm-7 text-left">
+                                <h1 data-animation="animated bounceInLeft" class="">Welcome To <span>Best Electrical Services</span></h1>
+                                <p data-animation="animated bounceInLeft" class="">Lorem Ipsum is simply dummy text of the industry<span> industry's standard dummy text.</span></p>
+                                <a class="btn btn-hero" data-animation="animated bounceInLeft" href="contact.html">Contact Us</a>
+                            </div>
+                            <div class="col-md-4 col-sm-5 text-right hidden-xs"> <img data-animation="animated zoomInLeft" src="images/{{$sliders[0]->image}}" alt=""> </div>
                         </div>
                     </div>
-                </li>
-                @endforeach
-            </ul>
-            <div class="tp-bannertimer tp-bottom"></div>
+                </div>
+                <!-- Item 2 -->
+                <div class="item slide2">
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-4 col-sm-5 text-center hidden-sm hidden-md hidden-lg"> <img data-animation="animated zoomInLeft" src="images/{{$sliders[1]->image}}" alt=""> </div>
+                            <div class="col-md-8 col-sm-7 text-left">
+                                <h1 data-animation="animated bounceInLeft" class="">Welcome To <span>Best Electrical Services</span></h1>
+                                <p data-animation="animated bounceInLeft" class="">Lorem Ipsum is simply dummy text of the industry<span> industry's standard dummy text.</span></p>
+                                <a class="btn btn-hero" data-animation="animated bounceInLeft" href="contact.html">Contact Us</a>
+                            </div>
+                            <div class="col-md-4 col-sm-5 text-right hidden-xs"> <img data-animation="animated zoomInLeft" src="images/{{$sliders[1]->image}}" alt=""> </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="item slide3">
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-4 col-sm-5 text-center hidden-sm hidden-md hidden-lg"> <img data-animation="animated zoomInLeft" src="images/slider-img1.png" alt=""> </div>
+                            <div class="col-md-8 col-sm-7 text-left">
+                                <h1 data-animation="animated bounceInLeft" class="">Welcome To <span>Best Electrical Services</span></h1>
+                                <p data-animation="animated bounceInLeft" class="">Lorem Ipsum is simply dummy text of the industry industry's standard dummy text.</p>
+                                <a class="btn btn-hero" data-animation="animated bounceInLeft" href="contact.html">Contact Us</a>
+                            </div>
+                            <div class="col-md-4 col-sm-5 text-right hidden-xs"> <img data-animation="animated zoomInLeft" src="images/slider-img3.png" alt=""> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Wrapper for slides--> <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> <i class="fa fa-angle-left"></i><span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> <i class="fa fa-angle-right"></i><span class="sr-only">Next</span> </a>
         </div>
     </div>
 </div>

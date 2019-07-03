@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp\htdocs\electric\resources\views/site/index/general_header.blade.php ENDPATH**/ ?>

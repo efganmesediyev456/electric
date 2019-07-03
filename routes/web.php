@@ -91,7 +91,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
 Route::group(['prefix' => '/{lng?}', 'as' => 'home'], function () {
     Route::get('/', 'HomeController@index');
-    Route::post('/', 'HomeController@contactUs');
+//    Route::post('/', 'HomeController@contactUs');
     Route::post('member', ['as' => '.membermail', 'uses' => 'HomeController@member']);
     Route::get('membership', ['as' => 'membership', 'uses' => 'MembershipController@show']);
     Route::get('news', ['as' => '.news_detail', 'uses' => 'NewsController@index']);

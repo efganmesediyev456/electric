@@ -52,9 +52,9 @@ class HomeController extends SiteController
         $about = view('site.index.abouts',['abouts'=>$abouts])->render();
         $this->vars['about'] = $about;
         //*********************
-        $teamVar = Team::select()->where('l_id',$lang->u_id)->first();
-        $team = view('site.index.team',['team'=>$teamVar]);
-        $this->vars['team'] = $team;
+//        $teamVar = Team::select()->where('l_id',$lang->u_id)->first();
+//        $team = view('site.index.team',['team'=>$teamVar]);
+//        $this->vars['team'] = $team;
         //*********************
         $newsVar = News::select()->where('l_id',$lang->u_id)->take(3)->get();
         $news = view('site.index.news',['news'=>$newsVar]);
