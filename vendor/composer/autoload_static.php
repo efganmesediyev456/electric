@@ -546,6 +546,7 @@ class ComposerStaticInit93a692c559a5ef6f87edbc5507a3af38
     );
 
     public static $classMap = array (
+        'AddText1ToSlidersTable' => __DIR__ . '/../..' . '/database/migrations/2019_07_03_064759_add_text_1_to_sliders_table.php',
         'AlbertCht\\InvisibleReCaptcha\\Facades\\InvisibleReCaptcha' => __DIR__ . '/..' . '/albertcht/invisible-recaptcha/src/Facades/InvisibleReCaptcha.php',
         'AlbertCht\\InvisibleReCaptcha\\InvisibleReCaptcha' => __DIR__ . '/..' . '/albertcht/invisible-recaptcha/src/InvisibleReCaptcha.php',
         'AlbertCht\\InvisibleReCaptcha\\InvisibleReCaptchaServiceProvider' => __DIR__ . '/..' . '/albertcht/invisible-recaptcha/src/InvisibleReCaptchaServiceProvider.php',

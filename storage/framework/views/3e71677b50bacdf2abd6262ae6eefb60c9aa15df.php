@@ -12,6 +12,9 @@
                 <th>Dil</th>
                 <th>Basliq</th>
                 <th>Haqqinda</th>
+                <th>Text_1</th>
+                <th>Text_2</th>
+                <th>Text_3</th>
                 <th>duymenin yazisi</th>
                 <th>Duymenin linki</th>
                 <th>Sekil</th>
@@ -25,6 +28,13 @@
                     <td><?php echo e($slider->lng->org_name); ?></td>
                     <td><?php echo e($slider->title); ?></td>
                     <td><?php echo e($slider->description); ?></td>
+
+                    <td><?php echo e($slider->text_bir); ?></td>
+                    <td><?php echo e($slider->text_iki); ?></td>
+                    <td><?php echo e($slider->text_uc); ?></td>
+
+
+
                     <td><?php echo e($slider->button_text); ?></td>
                     <td><?php echo e($slider->button_path); ?></td>
                     <td><img src="<?php echo e(route('home')); ?>/images/<?php echo e($slider->image); ?>" width="30px"

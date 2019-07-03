@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddText1ToSlidersTable' => $baseDir . '/database/migrations/2019_07_03_064759_add_text_1_to_sliders_table.php',
     'AlbertCht\\InvisibleReCaptcha\\Facades\\InvisibleReCaptcha' => $vendorDir . '/albertcht/invisible-recaptcha/src/Facades/InvisibleReCaptcha.php',
     'AlbertCht\\InvisibleReCaptcha\\InvisibleReCaptcha' => $vendorDir . '/albertcht/invisible-recaptcha/src/InvisibleReCaptcha.php',
     'AlbertCht\\InvisibleReCaptcha\\InvisibleReCaptchaServiceProvider' => $vendorDir . '/albertcht/invisible-recaptcha/src/InvisibleReCaptchaServiceProvider.php',

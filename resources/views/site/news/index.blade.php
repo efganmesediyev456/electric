@@ -8,9 +8,9 @@
     {!! $general !!}
 @endsection
 
-@section('menu')
-    {!! $menu !!}
-@endsection
+{{--@section('menu')--}}
+    {{--{!! $menu !!}--}}
+{{--@endsection--}}
 @section('content')
     <section class="inner-intro bg-img overlay-bg-color light-color parallax parallax-background">
 

@@ -1,7 +1,14 @@
 @foreach($menus as $menu)
 
     <li>
-        <a href="{{ $menu->url() }}">{{ $menu->title }}
+        <a
+                @if($menu->hasChildren())
+                @else
+                href="{{ $menu->url() }}"
+                @endif
+
+
+        >{{ $menu->title }}
             @if($menu->hasChildren())
                 <i class="fa fa-circle"></i>
             @endif

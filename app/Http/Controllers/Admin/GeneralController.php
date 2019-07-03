@@ -124,11 +124,19 @@ class GeneralController extends Controller
         //
         $generals = General::select()->where('u_id',$id)->get();
 
+
+        $image_path = public_path()."/images/".$generals->first()->image;
+        if(\File::exists($image_path)) {
+            \File::delete($image_path);
+        }
+//        $image_name=uniqid().'.'.$file->getClientOriginalExtension();
         if(is_uploaded_file($request->image)){
             $file = $request->image;
             $file->move('images', $file->getClientOriginalName());
             $input['image'] = $file->getClientOriginalName();
         }
+
+
 
         $attrs = $request->all();
         $ats = array_keys($attrs);

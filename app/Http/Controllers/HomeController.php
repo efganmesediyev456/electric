@@ -7,7 +7,7 @@ use App\Lng;
 use App\Menu;
 use App\News;
 use App\Slider;
-use App\Team;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Mail;
@@ -45,7 +45,7 @@ class HomeController extends SiteController
 
         $sliders = Slider::select()->where('l_id',$lang->u_id)->get();
         $sliders->load('lng');
-        $slider = view('site.index.sliders',['sliders'=>$sliders])->render();
+        $slider = view('site.index.sliders',['sliders'=>$sliders,'lng'=>$lng])->render();
         $this->vars['slider'] = $slider;
         //*********
         $abouts = About::select()->where('l_id',$lang->u_id)->get();
