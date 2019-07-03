@@ -45,9 +45,9 @@ class SiteController extends Controller
         $this->vars['menu'] = $menu;
         //******
         $about_us = About::select()->where('l_id',$l_id->u_id)->first();
-        $ads = Advertisement::select()->where('l_id',$l_id->u_id)->take(5)->get();
+    //    $ads = Advertisement::select()->where('l_id',$l_id->u_id)->take(5)->get();
         $footer = view('site.index.footer',['general'=>$generalVar==null?new General():$generalVar,
-            'about'=>$about_us==null?new About():$about_us,'ads'=>$ads]);
+            'about'=>$about_us==null?new About():$about_us]);
         $this->vars['footer'] = $footer;
 
         return view($this->template)->with($this->vars);
