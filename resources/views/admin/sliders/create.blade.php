@@ -10,7 +10,7 @@
             <div class="row lng-form" id="{{ $lng->u_id }}"
                  @if(!$lng->default) style="display: none" @endif>
 
-                @include('admin.forms.text', ['label' => 'Basliq',
+                @include('admin.forms.text', ['label' => 'Title',
                         'name'=>'title',
                         'lng'=>$lng,
                         'value'=>old('title'.$lng->u_id),
@@ -28,11 +28,33 @@
                         'value'=>old('button_text'.$lng->u_id),
                         'required'=>$lng->default])
 
+
+
                 @include('admin.forms.text', ['label' => 'Duyme linki',
                         'name'=>'button_path',
                         'lng'=>$lng,
                         'value'=>old('button_text'.$lng->u_id),
                         'required'=>$lng->default])
+
+                @include('admin.forms.text', ['label' => 'text_bir',
+                                   'name'=>'text_bir',
+                                   'lng'=>$lng,
+                                   'value'=>old('text_bir'.$lng->u_id),
+                                   'required'=>$lng->default])
+
+
+                @include('admin.forms.text', ['label' => 'text_iki',
+                      'name'=>'text_iki',
+                      'lng'=>$lng,
+                      'value'=>old('text_iki'.$lng->u_id),
+                      'required'=>$lng->default])
+
+                @include('admin.forms.text', ['label' => 'text_uc',
+                     'name'=>'text_uc',
+                     'lng'=>$lng,
+                     'value'=>old('text_uc'.$lng->u_id),
+                     'required'=>$lng->default])
+
 
             </div>
         @endforeach

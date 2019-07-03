@@ -49,11 +49,18 @@ class SlidersController extends Controller
             $uid = 1;
         } else $uid=$lastUid->u_id+1;
 
+
+
         $input = $request->except('_token');
         $file = $request->image;
-        $file->move('images',$file->getClientOriginalName());
+
+        $image_name=uniqid().'.'.$file->getClientOriginalExtension();
+
+        $file->move('images',$image_name);
         $input['u_id'] = $uid;
-        $input['image'] = $file->getClientOriginalName();
+        $input['image'] = $image_name;
+
+
 
         $attrs = $request->all();
         $ats = array_keys($attrs);
@@ -100,6 +107,7 @@ class SlidersController extends Controller
         $l_id = Lng::select('u_id')->whereNotIn('u_id', function ($q) use (&$id){
             $q->select('l_id')->from('sliders')->where('u_id',$id);
         })->get();
+
         foreach ($l_id as $lid){
             $newSlider = Slider::select()->where('u_id',$id)->first();
             $newSliderArray = collect($newSlider->toArray())->only(['u_id', 'image'])->toArray();
@@ -123,14 +131,29 @@ class SlidersController extends Controller
         //
         $sliders = Slider::select()->where('u_id',$id)->get();
 
+
+
+        $image_path = public_path()."/images/".$sliders->first()->image;
+
+        if(\File::exists($image_path)) {
+            \File::delete($image_path);
+        }
+
+
+
+
         if(is_uploaded_file($request->image)){
             $file = $request->image;
-            $file->move('images', $file->getClientOriginalName());
-            $input['image'] = $file->getClientOriginalName();
+
+            $image_name=uniqid().'.'.$file->getClientOriginalExtension();
+
+            $file->move('images', $image_name);
+            $input['image'] =$image_name;
 
         }
         $attrs = $request->all();
         $ats = array_keys($attrs);
+
         foreach ($sliders as $slider) {
             for ($i = 0; $i < count($ats); $i++) {
                 if (count(explode($slider->l_id, $ats[$i])) > 1) {

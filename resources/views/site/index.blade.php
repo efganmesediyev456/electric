@@ -8,9 +8,9 @@
     {!! $general !!}
 @endsection
 
-@section('menu')
-    {!! $menu !!}
-@endsection
+{{--@section('menu')--}}
+    {{--{!! $menu !!}--}}
+{{--@endsection--}}
 @section('sliders')
     {!! $slider !!}
 @endsection

@@ -8,10 +8,9 @@
 
 <?php $__env->stopSection(); ?>
 
-<?php $__env->startSection('menu'); ?>
-    <?php echo $menu; ?>
 
-<?php $__env->stopSection(); ?>
+    
+
 <?php $__env->startSection('sliders'); ?>
     <?php echo $slider; ?>
 

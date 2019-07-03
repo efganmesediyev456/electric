@@ -1,7 +1,14 @@
 <?php $__currentLoopData = $menus; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $menu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
     <li>
-        <a href="<?php echo e($menu->url()); ?>"><?php echo e($menu->title); ?>
+        <a
+                <?php if($menu->hasChildren()): ?>
+                <?php else: ?>
+                href="<?php echo e($menu->url()); ?>"
+                <?php endif; ?>
+
+
+        ><?php echo e($menu->title); ?>
 
             <?php if($menu->hasChildren()): ?>
                 <i class="fa fa-circle"></i>

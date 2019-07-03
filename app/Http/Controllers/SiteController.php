@@ -30,9 +30,13 @@ class SiteController extends Controller
         } else App::setLocale($lng);
         $l_id = Lng::select()->where('short_name',App::getLocale())->first();
 
-        $lngs = Lng::all();
-        $socials = Social::select()->where('l_id', $l_id->u_id)->get();
-        $topbar = view('site.index.topbar',['lngs'=>$lngs,'socials'=>$socials])->render();
+//        $lngs = Lng::all();
+
+        $generals = General::select()->where('l_id',$l_id->u_id)->first();
+
+//        $socials = Social::select()->where('l_id', $l_id->u_id)->get();
+        $menus = $this->getMenu($l_id);
+        $topbar = view('site.index.topbar',['generals'=>$generals, 'menus'=>$menus->roots()])->render();
         $this->vars['topbar'] = $topbar;
 
         //*******
@@ -40,9 +44,9 @@ class SiteController extends Controller
         $general = view('site.index.general_header',['general'=>$generalVar==null?new General():$generalVar])->render();
         $this->vars['general'] = $general;
         //****************
-        $menus = $this->getMenu($l_id);
-        $menu = view('site.index.menu',['menus'=>$menus->roots()])->render();
-        $this->vars['menu'] = $menu;
+//        $menus = $this->getMenu($l_id);
+//        $menu = view('site.index.menu',['menus'=>$menus->roots()])->render();
+//        $this->vars['menu'] = $menu;
         //******
         $about_us = About::select()->where('l_id',$l_id->u_id)->first();
 //        $ads = Advertisement::select()->where('l_id',$l_id->u_id)->take(5)->get();

@@ -14,6 +14,9 @@
                 <th>Dil</th>
                 <th>Basliq</th>
                 <th>Haqqinda</th>
+                <th>Text_1</th>
+                <th>Text_2</th>
+                <th>Text_3</th>
                 <th>duymenin yazisi</th>
                 <th>Duymenin linki</th>
                 <th>Sekil</th>
@@ -27,6 +30,13 @@
                     <td>{{ $slider->lng->org_name }}</td>
                     <td>{{ $slider->title }}</td>
                     <td>{{ $slider->description }}</td>
+
+                    <td>{{ $slider->text_bir }}</td>
+                    <td>{{ $slider->text_iki }}</td>
+                    <td>{{ $slider->text_uc }}</td>
+
+
+
                     <td>{{ $slider->button_text }}</td>
                     <td>{{ $slider->button_path }}</td>
                     <td><img src="{{ route('home') }}/images/{{$slider->image}}" width="30px"

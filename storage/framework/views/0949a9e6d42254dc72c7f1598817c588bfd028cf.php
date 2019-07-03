@@ -36,30 +36,10 @@
 <!-- Pre Loader -->
 <div id="dvLoading"></div>
 <!-- Header Start -->
-<header class="wow fadeInDown" data-offset-top="197" data-spy="affix">
-    <?php echo $__env->yieldContent('topbar'); ?>
-    <div class="header-inner">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="#" data-popupalt-original-title="null" title="#"></a> </div>
-                    <div class="mobile-menu"></div>
-                </div>
-                <div class="col-lg-9 col-md-9">
-                    <nav class="navbar navbar-default desktop">
-                        <div class="navbar-collapse">
-                            <!-- Main Menu -->
-                            <ul id="nav" class="nav menu navbar-nav">
-                               <?php echo $__env->yieldContent('menu'); ?>
-                            </ul>
-                            <!-- End Main Menu -->
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+
+<?php echo $__env->yieldContent('topbar'); ?>
+
+
 <!-- Header End -->
 <!-- Banner Wrapper Start -->
 <?php echo $__env->yieldContent('sliders'); ?>
