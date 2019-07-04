@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'blog'=>'Blog rus',
     'welcome'=>'Добро пожаловать',
     'address'=>'Адрес',
     'phone'=>'Телефон',

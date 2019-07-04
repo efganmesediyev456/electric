@@ -59,4 +59,4 @@
             </div>
         </div>
     </div>
-</section>
+</section><?php /**PATH C:\xampp\htdocs\electric\resources\views/site/index/team.blade.php ENDPATH**/ ?>

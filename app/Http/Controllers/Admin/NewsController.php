@@ -102,20 +102,26 @@ class NewsController extends SiteController
         $menu = Menu::select()->where(['l_id' => $lang->u_id, 'url_tag' => 'news'])->first();
         $this->vars['seo'] = $menu;
 
-        $randNewses = News::select()->where('l_id',$lang->u_id)->orderByRaw('RAND()')->take(6)->get();
-        $this->vars['randNewses'] = $randNewses;
+//        $randNewses = News::select()->where('l_id',$lang->u_id)->orderByRaw('RAND()')->take(6)->get();
+//        $this->vars['randNewses'] = $randNewses;
 
         $advert = News::select()->where(['name'=>$url_tag, 'l_id'=>$lang->u_id])->first();
         $this->vars['advert'] = $advert;
 
-        if ($advert) {
-            $prevAdvert = News::select()->where([['l_id', '=', $lang->u_id], ['u_id', '<', $advert->u_id]])->first();
-            $nextAdvert = News::select()->where([['l_id', '=', $lang->u_id], ['u_id', '>', $advert->u_id]])->first();
-            $this->vars['prevAdvert'] = $prevAdvert;
-            $this->vars['nextAdvert'] = $nextAdvert;
-            $this->vars['seo']['description'] = $advert->description;
-            $this->vars['seo']['image'] = $advert->image;
-        }
+
+        $categories=Category::select()->where(['l_id'=>$lang->u_id])->get();
+
+        $this->vars['categories'] = $categories;
+
+
+//        if ($advert) {
+//            $prevAdvert = News::select()->where([['l_id', '=', $lang->u_id], ['u_id', '<', $advert->u_id]])->first();
+//            $nextAdvert = News::select()->where([['l_id', '=', $lang->u_id], ['u_id', '>', $advert->u_id]])->first();
+//            $this->vars['prevAdvert'] = $prevAdvert;
+//            $this->vars['nextAdvert'] = $nextAdvert;
+//            $this->vars['seo']['description'] = $advert->description;
+//            $this->vars['seo']['image'] = $advert->image;
+//        }
 
         return $this->renderOutput($lng);
     }
