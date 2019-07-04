@@ -28,3 +28,10 @@
         </div>
     </div>
 </section>
+
+<div class="join-wrapper">
+    <div class="container">
+        <h3>Fast Electrician Services <span>Benefits Of Electrician</span></h3>
+        <a href="javascript:void(0)">Join Us Now</a>
+    </div>
+</div>

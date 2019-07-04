@@ -2562,7 +2562,7 @@ div.about-faq-wrapper .panel-faq .panel-body {
 ================================================
 */
 .breadcromb-wrapper {
-	background: rgba(0, 0, 0, 0) url("../images/breadcrumb-bg.jpg") no-repeat fixed top center / cover;
+	background: rgba(0, 0, 0, 0) url("http://localhost:81/electric/public/images/breadcrumb-bg.jpg") no-repeat fixed top center / cover;
 	position: relative;
 	padding: 60px 0 10px;
 	float: left;

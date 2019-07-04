@@ -3,10 +3,9 @@
 
 <?php $__env->stopSection(); ?>
 
-<?php $__env->startSection('general_header'); ?>
-    <?php echo $general; ?>
 
-<?php $__env->stopSection(); ?>
+    
+
 
 
     
@@ -20,15 +19,31 @@
 
 <?php $__env->stopSection(); ?>
 
-    
+
+<?php $__env->startSection('services'); ?>
+    <?php echo $services; ?>
+
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('team'); ?>
+    <?php echo $team; ?>
+
+<?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('news'); ?>
     <?php echo $news; ?>
 
 <?php $__env->stopSection(); ?>
+
+
+    
+
+
 <?php $__env->startSection('content'); ?>
     ##parent-placeholder-040f06fd774092478d450774f5ba30c5da78acc8##
 <?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('footer'); ?>
     <?php echo $footer; ?>
 

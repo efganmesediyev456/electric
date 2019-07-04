@@ -54,6 +54,19 @@ class SiteController extends Controller
             'about'=>$about_us==null?new About():$about_us]);
         $this->vars['footer'] = $footer;
 
+        $services=view('site.index.services')->render();
+        $this->vars['services']=$services;
+
+        $team=view('site.index.team')->render();
+        $this->vars['team']=$team;
+
+        $news=view('site.index.news')->render();
+        $this->vars['news']=$news;
+
+//        $test=view('site.index.test')->render();
+//        $this->vars['test']=$test;
+
+
         return view($this->template)->with($this->vars);
     }
 

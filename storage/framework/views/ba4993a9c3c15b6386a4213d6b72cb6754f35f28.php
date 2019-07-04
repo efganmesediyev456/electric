@@ -27,4 +27,11 @@
             <!-- display-table -->
         </div>
     </div>
-</section><?php /**PATH C:\xampp\htdocs\electric\resources\views/site/index/abouts.blade.php ENDPATH**/ ?>
+</section>
+
+<div class="join-wrapper">
+    <div class="container">
+        <h3>Fast Electrician Services <span>Benefits Of Electrician</span></h3>
+        <a href="javascript:void(0)">Join Us Now</a>
+    </div>
+</div><?php /**PATH C:\xampp\htdocs\electric\resources\views/site/index/abouts.blade.php ENDPATH**/ ?>

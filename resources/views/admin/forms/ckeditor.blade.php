@@ -9,8 +9,8 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
             <textarea name="{{$name.$lng->u_id}}" class="ck" id="text"
                       rows="5" @if($required) required @endif> {!! $value !!}</textarea>
-            <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-            <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+            <script src="/electric/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+            <script src="/electric/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
             <script>
                 $('.ck').ckeditor();
                 config.disallowedContent = 'br';

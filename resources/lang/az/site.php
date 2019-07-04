@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'blog'=>'Bloq',
     'welcome'=>'Saytımıza xoş gəlmisiniz',
     'address'=>'Ünvan',
     'phone'=>'Telefon',

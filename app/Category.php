@@ -21,4 +21,8 @@ class Category extends Model
     public function lng(){
         return $this->belongsTo('App\Lng','l_id','id');
     }
+    public function scopeBySortOrder($query)
+    {
+        return $query->where('l_id',1);
+    }
 }

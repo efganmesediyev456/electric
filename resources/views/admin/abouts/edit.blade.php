@@ -51,8 +51,8 @@
                                        name="title" value="{{ $about->title }}" required>--}}
                                 <textarea name="description" id="description" rows="5"
                                           class="ckedit form-control col-md-7 col-xs-12 @error('description') parsley-error @enderror">{!! $about->description !!}</textarea>
-                                <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-                                <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+                                <script src="/electric/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+                                <script src="/electric/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
                                 <script>
                                     $('.ckedit').ckeditor();
                                     config.disallowedContent = 'br';
